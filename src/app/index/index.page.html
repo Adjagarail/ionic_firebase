@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>index</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      
+          <ion-item>
+            <ion-input placeholder="Entrez Prenom" [(ngModel)]="UsersPrenom"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input placeholder="Entrez Nom" [(ngModel)]="UsersNom"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input placeholder="Entrez Entreprise" [(ngModel)]="UsersEntreprise"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input placeholder="Entrez Poste" [(ngModel)]="UsersPoste"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-input placeholder="Entrez Email" [(ngModel)]="UsersMail"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input placeholder="Entrez Telephone" [(ngModel)]="UsersTelephone"></ion-input>
+          </ion-item>
+    </ion-list>
+    <ion-button (click)="CreateRecord()"
+      [disabled]="!UsersPrenom || !UsersNom || !UsersEntreprise || !UsersPoste || !UsersMail || !UsersTelephone">
+      <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+      &nbsp;Create Record
+    </ion-button>
+</ion-content>
